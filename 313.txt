@@ -1,0 +1,67 @@
+3월 13일 정리
+int 정수 /str 문자 /float 실수/ bool 합불
+파이썬 콤마 + 차이 : 콤마는 띄어쓰기 되지만 플러스는 붙여서 출력된다
+콤마는 각각 개별값으로 연결되기에 개별 값으로 전달되어 출력되지만 플러스는 형식 혼합 불가능 즉 str int float 혼합 불가능 캐스팅 필요
+a = 10
+b = str(a)
+print ("This is law practice 1",a)
+print ("This is law practice 1"+ a)
+여기서 두번째는 출력 불가능 this is law practice 는 문자열인데 a는 정수열
+
+f스트링
+xpy = "time"
+print(f"{xpy} is gold")
+
+처음에 f를 쓰고 쓰고 싶은 변수나 값을 중괄호 안에다가 넣어주면 됨 
+xpy = "time"
+ddd = 1
+print(f"{ddd} is gold")
+
+이걸 쓰면 콤마나 다른 것을 쓸 필요가 없고 어디에 어떤 변수가 들어갈 수 있는지 굉장히 가독성이 좋게 쓸 수가 있다. (+ 연산처럼 모든 형식 맞출 필요 X)
+
+True 자체가 bool의 연산자 이므로 
+derive = True
+drink = False
+both = drink and derive
+print(both)
+
+이땐 False 출력됨
+
+문자열끼리 크고 작음을 비교할 때 아스키코드가 큰쪽으로 됨 (true false 출력됨)
+
+and or 둘다 오퍼레이터임 not 도 오퍼레이터
+derive = True
+print (not derive)
+이건 False 출력됨
+
+derive = True
+print (f"{not derive}")
+이렇게 되면 f스트링으로 출력 값은 False
+
+if elif 두 컨디션이 둘다 맞다면 if만 출력됨 즉 위에 있는 순서대로 
+
+while 은 컨디션이 false가 되기 전까지 계속 그 블럭안에서 실행된다.
+for문 for n in range(5): n이 0, 1, 2, 3, 4 까지 반복됨// n이 변수 
+each time through the loop, <variable> takes a value
+ first time, <variable> starts at the smallest value
+ next time, <variable> gets the prev value + 1
+range라는 것이 돌때 마다 1씩 증가 시킨다 // range(start,stop,step) 3가지의 변수를 가질 수 있는 함수
+
+mysum = 0
+for i in range(7, 10):
+    mysum += i
+    print(mysum)
+
+이걸 해석해보면 mysum이 처음에 0임 그리고 i라는 변수가 7 , 8 , 9를 가지고 3번 반복하게 됨 (stop -1까지 반복이 됨)
+
+break은 그 블록을 빠져나간다고 생각하면 편하다.
+
+mysum = 0
+for i in range(5, 11, 2):
+	mysum += i
+	if mysum == 5:
+		break
+		mysum += 1
+print(mysum)
+
+이건 값이 5가 나옴 break을 만나는 순간 조건이 맞는다면 그 아래의 모든 것이 무시된다.
